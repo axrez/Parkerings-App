@@ -1,4 +1,4 @@
-#Parkerings App
+# Parkerings App
 
 This is a school project by three studnets in Slagelse Denmark
 
