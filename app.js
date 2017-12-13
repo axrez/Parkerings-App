@@ -13,7 +13,7 @@ var oldParkeringsData = [];
 var newParkeringsData = [];
 parser.on('data', (data) => {
 	if(Number(data) == Number(999999)){
-		console.log("dataStart2s");
+		console.log("dataStart");
 		return;
 	}
 	
