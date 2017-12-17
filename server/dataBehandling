@@ -1,9 +1,7 @@
 const app = require('../app.js');
 
 const treshhold = 500;
-const pladsLedig1 = [ true, true, false, false];
-const pladsLedig2 = [ true, true, true, false];
-const pladsLedig3 = [ true, true, true, false];
+
 
 let parkeringsPlads = {};
 
@@ -47,7 +45,7 @@ let _exports = {
                     n++;
                 }
             }
-            pPladser[i].aval = n < 1;
+            pPladser[i].aval = n < 2;
         }
         //}
     },

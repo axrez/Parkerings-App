@@ -6,7 +6,8 @@
   "dependencies": {
     "express": "*",
     "nodegit-clone": "^1.2.0",
-    "serialport": "*"
+    "serialport": "*",
+    "socket.io": "^2.0.4"
   },
   "author": "mig",
   "license": "ISC"

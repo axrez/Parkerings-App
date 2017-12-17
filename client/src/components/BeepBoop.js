@@ -9,7 +9,7 @@ class BeepBoop extends React.Component{
   };
 
   componentDidMount() {
-    fetch('/data')
+    fetch('/length')
       .then(res => res.json())
       .then(data => this.setState({ data }));
   };

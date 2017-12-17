@@ -2,6 +2,8 @@ const SerialPort = require('serialport');
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+const io = require('socket.io')();
+
 
 var parkeringsPlads = require('./server/dataBehandling');
 
@@ -11,7 +13,7 @@ const app = express();
 // const port = new SerialPort('COM7');
 // const parser = port.pipe(new Readline());
 
-var oldParkeringsData = [ 895, 455, 1345, 499, 1345, 5321]; 
+var oldParkeringsData = [ 795, 655, 615, 499, 1345, 5321]; 
 exports.data = oldParkeringsData;
 var newParkeringsData = [];
 // parser.on('data', (data) => {
@@ -36,13 +38,15 @@ app.get('/',(req, res) => {
 	// if(!parkeringsPlads){
 	// 	parkeringsPlads = require('./server/dataBehandling');	
 	// }
-	parkeringsPlads.ledigTjek(oldParkeringsData)
+	parkeringsPlads.ledigTjek(oldParkeringsData);
 	res.send(parkeringsPlads.getData());
 	console.log("Beep Boop");
 });
 
 app.get('/data',(req, res) => {
-	res.send(oldParkeringsData);
+	parkeringsPlads.ledigTjek(oldParkeringsData);
+	res.send(parkeringsPlads.getData());
+	console.log("Beep Boop");
 });
 
 app.get('/new',(req,res) =>{
@@ -52,6 +56,10 @@ app.get('/new',(req,res) =>{
 app.get('/length',(req, res) => {
 	res.send(String(oldParkeringsData.length));
 });
+
+setInterval(() =>{
+	io.emit("data", parkeringsPlads.getData());
+}, 30 * 1000);
 
 app.listen(3001, () => {
 	console.log('Server started on port 3001...');
