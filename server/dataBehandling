@@ -1,6 +1,6 @@
 const app = require('../app.js');
 
-const treshhold = 500;
+const treshhold = 1000;
 
 
 let parkeringsPlads = {};
@@ -36,7 +36,7 @@ let _exports = {
     ledigTjek: (parkeringsData) => {
         let ledigePladser = [true, true, true, true];
         let pladser = pPladser;
-        console.log("weep woop");
+        // console.log("weep woop");
         //if(parkeringsData.length == 27){
         for (let i = 0; i < 3; i++) {
             let n = 0;
@@ -49,9 +49,14 @@ let _exports = {
         }
         //}
     },
-    getData: () =>{
+    getData: () => {
         return pPladser;
+    },
+    getOpenSpace: () =>  {
+        let openSpace = [pPladser[0].aval, pPladser[1].aval, pPladser[2].aval, pPladser[3].aval];
+        return openSpace;
     }
+    
 };
 
 
