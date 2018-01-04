@@ -5,18 +5,15 @@ import NotFound from './components/NotFound';
 import BeepBoop from './components/BeepBoop';
 import Help from './components/Help';
 
-class Routes extends React.Component{
-  render(){
-    return(
-      <main>
-        <Switch>
-          <Route exact path="/" component={BeepBoop} />
-          <Route exact path="/help" component={Help} />
-          <Route path="*" component={NotFound} />
-        </Switch>
-      </main>
-    );
-  }
-}
+const Routes = () => (
+  <main>
+    <Switch>
+      <Route exact path="/" component={BeepBoop} />
+      <Route exact path="/help" component={Help} />
+      <Route path="*" component={NotFound} />
+    </Switch>
+  </main>
+);
 
-export default Routes
+
+export default Routes;
