@@ -9,20 +9,6 @@ class BeepBoop extends React.Component {
       pData: [],
       endpoint: 'http://localhost:3001/',
       style: {
-        optaget: {
-          color: 'red',
-          backgroundColor: 'red',
-          width: 100,
-          height: 100,
-          border: '3px solid black',
-        },
-        ledig: {
-          color: 'green',
-          backgroundColor: 'green',
-          width: 100,
-          height: 100,
-          border: '3px solid black',
-        },
         gridContainer: {
           display: 'grid',
           gridTemplateColumns: '120px 120px',
@@ -43,12 +29,12 @@ class BeepBoop extends React.Component {
         <h2>Parkeringsplads:</h2>
         <div style={this.state.style.gridContainer}>
           <div>
-            <ParkeringsPlads pData={this.state.pData[0]} style={this.state.style} />
-            <ParkeringsPlads pData={this.state.pData[1]} style={this.state.style} />
+            <ParkeringsPlads paData={this.state.pData[0]} />
+            <ParkeringsPlads pData={this.state.pData[1]} />
           </div>
           <div>
-            <ParkeringsPlads pData={this.state.pData[3]} style={this.state.style} />
-            <ParkeringsPlads pData={this.state.pData[2]} style={this.state.style} />
+            <ParkeringsPlads pData={this.state.pData[3]} />
+            <ParkeringsPlads pData={this.state.pData[2]} />
           </div>
         </div>
       </div>
