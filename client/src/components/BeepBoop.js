@@ -7,7 +7,7 @@ class BeepBoop extends React.Component {
     super(props);
     this.state = {
       pData: [],
-      endpoint: 'http://localhost:3001/',
+      endpoint: 'http://192.168.1.47:3001/',
       style: {
         gridContainer: {
           display: 'grid',
@@ -29,7 +29,7 @@ class BeepBoop extends React.Component {
         <h2>Parkeringsplads:</h2>
         <div style={this.state.style.gridContainer}>
           <div>
-            <ParkeringsPlads paData={this.state.pData[0]} />
+            <ParkeringsPlads pData={this.state.pData[0]} />
             <ParkeringsPlads pData={this.state.pData[1]} />
           </div>
           <div>
