@@ -1,6 +1,6 @@
 const app = require('../app.js');
 
-const treshhold = 1000;
+const treshold = 1000;
 
 
 let parkeringsPlads = {};
@@ -38,14 +38,14 @@ let _exports = {
         let pladser = pPladser;
         // console.log("weep woop");
         //if(parkeringsData.length == 27){
-        for (let i = 0; i < 3; i++) {
+        for (let i = 0; i < 4; i++) {
             let n = 0;
             for (let l = pPladser[i].intervalStart; l <= pPladser[i].intervalStop; l++) {
-                if (parkeringsData[l] < treshhold) {
+                if (parkeringsData[l] < treshold) {
                     n++;
                 }
             }
-            pPladser[i].aval = n < 2;
+            pPladser[i].aval = n > 2;
         }
         //}
     },
