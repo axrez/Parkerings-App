@@ -1,11 +1,12 @@
 import React from 'react';
 
-class NotFound extends React.Component{
-  render(){
-    return(
-      <p>404 Woops doops i dont be da Beep Boop </p>
-    );
-  }
-};
+const NotFound = () => (
+  <div style={{ display: 'inline' }}>
+    <h3>404 Not Found!!</h3>
+    <br />
+    <h4>Please return to the main page by clicking</h4>
+    <a href="/">Here!</a>
+  </div>
+);
 
 export default NotFound;

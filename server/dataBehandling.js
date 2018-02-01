@@ -45,7 +45,7 @@ let _exports = {
                     n++;
                 }
             }
-            pPladser[i].aval = n > 2;
+            pPladser[i].aval = n < 2;
         }
         //}
     },
