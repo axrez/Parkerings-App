@@ -6,7 +6,7 @@ class BeepBoop extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      pData: [],
+      pData: [true, true, true, true],
       endpoint: 'http://10.112.226.2:3001/',
       style: {
         gridContainer: {
