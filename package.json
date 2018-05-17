@@ -4,10 +4,11 @@
   "description": "teknologi projekt",
   "main": "app.js",
   "dependencies": {
-    "express": "*",
+    "express": "^4.16.3",
+    "hoek": "^5.0.3",
     "nodegit-clone": "^1.2.0",
-    "serialport": "*",
-    "socket.io": "^2.0.4"
+    "serialport": "^6.2.0",
+    "socket.io": "^2.1.0"
   },
   "author": "mig",
   "license": "ISC"
